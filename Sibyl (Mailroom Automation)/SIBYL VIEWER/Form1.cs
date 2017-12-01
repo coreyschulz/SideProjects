@@ -60,7 +60,7 @@ namespace SIBYL_VIEWER
 
         public InputSimulator hachi;
 
-        public int sleepInterval = 50;
+        public int sleepInterval = 25;
 
         /// <summary>
         /// Sets up the overarching dictionaries.
@@ -199,51 +199,81 @@ namespace SIBYL_VIEWER
         private void largeBoxButton_Click(object sender, EventArgs e)
         {
             typeKey = "large";
+            buttonColorChangerTypes();
+            largeBoxButton.BackColor = Color.Orange;
+            largeBoxButton.ForeColor = Color.Black;
         }
 
         private void osBoxButton_Click(object sender, EventArgs e)
         {
             typeKey = "os";
+            buttonColorChangerTypes();
+            osBoxButton.BackColor = Color.Orange;
+            osBoxButton.ForeColor = Color.Black;
         }
 
         private void smallBoxButton_Click(object sender, EventArgs e)
         {
             typeKey = "small";
+            buttonColorChangerTypes();
+            smallBoxButton.BackColor = Color.Orange;
+            smallBoxButton.ForeColor = Color.Black;
         }
 
         private void tubeBoxButton_Click(object sender, EventArgs e)
         {
             typeKey = "tube";
+            buttonColorChangerTypes();
+            tubeBoxButton.BackColor = Color.Orange;
+            tubeBoxButton.ForeColor = Color.Black;
         }
 
         private void amzlButton_Click(object sender, EventArgs e)
         {
             carrierKey = "amazon";
+            buttonColorChangerCarriers();
+            amzlButton.BackColor = Color.Orange;
+            amzlButton.ForeColor = Color.Black;
         }
 
         private void dhlButton_Click(object sender, EventArgs e)
         {
             carrierKey = "dhl";
+            buttonColorChangerCarriers();
+            dhlButton.BackColor = Color.Orange;
+            dhlButton.ForeColor = Color.Black;
         }
 
         private void fedexButton_Click(object sender, EventArgs e)
         {
             carrierKey = "fedex";
+            buttonColorChangerCarriers();
+            fedexButton.BackColor = Color.Orange;
+            fedexButton.ForeColor = Color.Black;
         }
 
         private void ontracButton_Click(object sender, EventArgs e)
         {
             carrierKey = "ontrac";
+            buttonColorChangerCarriers();
+            ontracButton.BackColor = Color.Orange;
+            ontracButton.ForeColor = Color.Black;
         }
 
         private void upsButton_Click(object sender, EventArgs e)
         {
             carrierKey = "ups";
+            buttonColorChangerCarriers();
+            upsButton.BackColor = Color.Orange;
+            upsButton.ForeColor = Color.Black;
         }
 
         private void uspsButton_Click(object sender, EventArgs e)
         {
             carrierKey = "usps";
+            buttonColorChangerCarriers();
+            uspsButton.BackColor = Color.Orange;
+            uspsButton.ForeColor = Color.Black;
         }
 
         /// <summary>
@@ -332,11 +362,39 @@ namespace SIBYL_VIEWER
             currentNum = currentstring;
 
         }
+        private void buttonColorChangerTypes()
+        {
+            largeBoxButton.BackColor = Color.Black;
+            smallBoxButton.BackColor = Color.Black;
+            tubeBoxButton.BackColor = Color.Black;
+            osBoxButton.BackColor = Color.Black;
+
+            largeBoxButton.ForeColor = Color.White;
+            smallBoxButton.ForeColor = Color.White;
+            tubeBoxButton.ForeColor = Color.White;
+            osBoxButton.ForeColor = Color.White;
+        }
+
+        private void buttonColorChangerCarriers()
+        {
+            amzlButton.BackColor = Color.Black;
+            upsButton.BackColor = Color.Black;
+            uspsButton.BackColor = Color.Black;
+            ontracButton.BackColor = Color.Black;
+            dhlButton.BackColor = Color.Black;
+            fedexButton.BackColor = Color.Black;
+
+            amzlButton.ForeColor = Color.White;
+            upsButton.ForeColor = Color.White;
+            uspsButton.ForeColor = Color.White;
+            ontracButton.ForeColor = Color.White;
+            fedexButton.ForeColor = Color.White;
+            dhlButton.ForeColor = Color.White;
+
+        }
+
+        ///
+        /// END BUTTON OPERATIONS
+        /// 
     }
-
-
-
-    ///
-    /// END BUTTON OPERATIONS
-    /// 
 }
