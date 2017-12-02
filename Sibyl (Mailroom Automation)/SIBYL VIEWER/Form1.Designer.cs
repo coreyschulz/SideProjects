@@ -44,6 +44,7 @@
             this.upsButton = new System.Windows.Forms.Button();
             this.uspsButton = new System.Windows.Forms.Button();
             this.executeButton = new System.Windows.Forms.Button();
+            this.masterpieceButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -216,12 +217,24 @@
             this.executeButton.UseVisualStyleBackColor = true;
             this.executeButton.Click += new System.EventHandler(this.executeButton_Click);
             // 
+            // masterpieceButton
+            // 
+            this.masterpieceButton.Enabled = false;
+            this.masterpieceButton.Location = new System.Drawing.Point(63, 691);
+            this.masterpieceButton.Name = "masterpieceButton";
+            this.masterpieceButton.Size = new System.Drawing.Size(305, 52);
+            this.masterpieceButton.TabIndex = 17;
+            this.masterpieceButton.Text = "masterpiece001.wav";
+            this.masterpieceButton.UseVisualStyleBackColor = true;
+            this.masterpieceButton.Click += new System.EventHandler(this.masterpieceButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightCyan;
             this.ClientSize = new System.Drawing.Size(1326, 977);
+            this.Controls.Add(this.masterpieceButton);
             this.Controls.Add(this.executeButton);
             this.Controls.Add(this.uspsButton);
             this.Controls.Add(this.upsButton);
@@ -263,6 +276,7 @@
         private System.Windows.Forms.Button upsButton;
         private System.Windows.Forms.Button uspsButton;
         private System.Windows.Forms.Button executeButton;
+        private System.Windows.Forms.Button masterpieceButton;
     }
 }
 

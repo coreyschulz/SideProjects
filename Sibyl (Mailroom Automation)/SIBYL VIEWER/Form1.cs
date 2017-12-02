@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using Microsoft.VisualBasic;
 using WindowsInput;
 using WindowsInput.Native;
+using System.Media;
 
 namespace SIBYL_VIEWER
 {
@@ -62,11 +63,15 @@ namespace SIBYL_VIEWER
 
         public int sleepInterval = 25;
 
+        SoundPlayer masterpiece001;
         /// <summary>
         /// Sets up the overarching dictionaries.
         /// </summary>
         public Form1()
         {
+
+            masterpiece001 = new SoundPlayer("masterpiece001.wav");
+
             hachi = new InputSimulator();
 
             draco = new Dictionary<string, int>();
@@ -169,6 +174,7 @@ namespace SIBYL_VIEWER
                 osBoxButton.Enabled = true;
                 largeBoxButton.Enabled = true;
                 tubeBoxButton.Enabled = true;
+                masterpieceButton.Enabled = true;
 
             }
             else
@@ -177,6 +183,7 @@ namespace SIBYL_VIEWER
                 typeKey = "envelope";
                 label2.Text = "~ENVELOPES~";
                 enableCarrierButtons();
+                masterpieceButton.Enabled = true;
 
 
             }
@@ -283,7 +290,7 @@ namespace SIBYL_VIEWER
         /// <param name="e"></param>
         private void executeButton_Click(object sender, EventArgs e)
         {
-            DateTime currentdate = DateTime.UtcNow.Date; // NTP is 'da bomb. System clock won't fail, presumably.
+            DateTime currentdate = DateTime.Now.Date; // NTP is 'da bomb. System clock won't fail, presumably.
             Clipboard.SetText(currentdate.ToString("M-d-") + currentNum); // format: 6-11-000
 
             hachi.Keyboard.KeyDown(VirtualKeyCode.MENU);
@@ -391,6 +398,16 @@ namespace SIBYL_VIEWER
             fedexButton.ForeColor = Color.White;
             dhlButton.ForeColor = Color.White;
 
+        }
+
+        private void masterpiece001wavToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            masterpiece001.Play();
+        }
+
+        private void masterpieceButton_Click(object sender, EventArgs e)
+        {
+            masterpiece001.Play();
         }
 
         ///
