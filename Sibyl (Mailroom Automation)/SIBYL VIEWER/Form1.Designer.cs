@@ -45,21 +45,28 @@
             this.uspsButton = new System.Windows.Forms.Button();
             this.executeButton = new System.Windows.Forms.Button();
             this.masterpieceButton = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.t2 = new System.Windows.Forms.Label();
+            this.t1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.t3 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.t4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Perpetua Titling MT", 22.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Berlin Sans FB", 22.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(51, 38);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(537, 70);
+            this.label1.Size = new System.Drawing.Size(144, 65);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Sibyl - initialize";
+            this.label1.Text = "sibyl.\r\n";
             // 
             // boxButton
             // 
-            this.boxButton.Location = new System.Drawing.Point(615, 31);
+            this.boxButton.Location = new System.Drawing.Point(633, 372);
             this.boxButton.Name = "boxButton";
             this.boxButton.Size = new System.Drawing.Size(246, 112);
             this.boxButton.TabIndex = 1;
@@ -69,7 +76,7 @@
             // 
             // envButton
             // 
-            this.envButton.Location = new System.Drawing.Point(615, 158);
+            this.envButton.Location = new System.Drawing.Point(633, 490);
             this.envButton.Name = "envButton";
             this.envButton.Size = new System.Drawing.Size(246, 121);
             this.envButton.TabIndex = 2;
@@ -228,12 +235,88 @@
             this.masterpieceButton.UseVisualStyleBackColor = true;
             this.masterpieceButton.Click += new System.EventHandler(this.masterpieceButton_Click);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Perpetua Titling MT", 22.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(471, 350);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(0, 70);
+            this.label3.TabIndex = 18;
+            // 
+            // t2
+            // 
+            this.t2.AutoSize = true;
+            this.t2.Font = new System.Drawing.Font("Arial Narrow", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.t2.Location = new System.Drawing.Point(668, 62);
+            this.t2.Name = "t2";
+            this.t2.Size = new System.Drawing.Size(180, 43);
+            this.t2.TabIndex = 19;
+            this.t2.Text = "Are you at...";
+            // 
+            // t1
+            // 
+            this.t1.AutoSize = true;
+            this.t1.Font = new System.Drawing.Font("Arial Narrow", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.t1.Location = new System.Drawing.Point(668, 19);
+            this.t1.Name = "t1";
+            this.t1.Size = new System.Drawing.Size(161, 43);
+            this.t1.TabIndex = 20;
+            this.t1.Text = "(Optional.)";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(697, 108);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(100, 58);
+            this.button1.TabIndex = 21;
+            this.button1.Text = "MHC";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // t3
+            // 
+            this.t3.AutoSize = true;
+            this.t3.Font = new System.Drawing.Font("Arial Narrow", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.t3.Location = new System.Drawing.Point(722, 169);
+            this.t3.Name = "t3";
+            this.t3.Size = new System.Drawing.Size(46, 43);
+            this.t3.TabIndex = 22;
+            this.t3.Text = "or";
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(697, 221);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(100, 58);
+            this.button2.TabIndex = 23;
+            this.button2.Text = "LSND";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // t4
+            // 
+            this.t4.AutoSize = true;
+            this.t4.Font = new System.Drawing.Font("Arial Narrow", 13.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.t4.Location = new System.Drawing.Point(650, 326);
+            this.t4.Name = "t4";
+            this.t4.Size = new System.Drawing.Size(209, 43);
+            this.t4.TabIndex = 24;
+            this.t4.Text = "(Not optional.)";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightCyan;
             this.ClientSize = new System.Drawing.Size(1326, 977);
+            this.Controls.Add(this.t4);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.t3);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.t1);
+            this.Controls.Add(this.t2);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.masterpieceButton);
             this.Controls.Add(this.executeButton);
             this.Controls.Add(this.uspsButton);
@@ -252,7 +335,7 @@
             this.Controls.Add(this.boxButton);
             this.Controls.Add(this.label1);
             this.Name = "Form1";
-            this.Text = "Sibyl System";
+            this.Text = "sibyl.";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -277,6 +360,13 @@
         private System.Windows.Forms.Button uspsButton;
         private System.Windows.Forms.Button executeButton;
         private System.Windows.Forms.Button masterpieceButton;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label t2;
+        private System.Windows.Forms.Label t1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label t3;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label t4;
     }
 }
 

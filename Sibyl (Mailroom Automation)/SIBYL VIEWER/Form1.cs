@@ -35,6 +35,18 @@ namespace SIBYL_VIEWER
         public bool setupComplete { get; set; }
 
         /// <summary>
+        /// If you're at MHC, then good for you. 
+        /// Have fun doing two packages. 
+        /// </summary>
+        public bool MHC { get; set; }
+
+        /// <summary>
+        /// If you are at Lassonde, 
+        /// then innovation courses through you!
+        /// </summary>
+        public bool LSND { get; set; }
+
+        /// <summary>
         /// The type of parcel being issued. 
         /// Possible: 
         /// Envelopes: 1 down
@@ -89,6 +101,8 @@ namespace SIBYL_VIEWER
             maria["small"] = 4;
             maria["tube"] = 5;
 
+            MHC = false;
+            LSND = false;
 
             InitializeComponent();
         }
@@ -143,16 +157,6 @@ namespace SIBYL_VIEWER
             }
         }
 
-        private void boxesLoop()
-        {
-
-        }
-
-        private void envelopeLoop()
-        {
-
-        }
-
         /// <summary>
         /// Remember how Frieza transforms eight times? 
         /// It's like that, but only one time. 
@@ -162,9 +166,15 @@ namespace SIBYL_VIEWER
             boxButton.Hide(); // "Darkness will prevail and the light expire!"
             envButton.Hide();
             numberBox.Hide();
+            button1.Hide();
+            button2.Hide();
+            t1.Hide();
+            t2.Hide();
+            t3.Hide();
+            t4.Hide();
             if (loopProtocol)
             {
-                label1.Text = "Sibyl: " + currentNum; // Displays the current num so confusion doesn't reign.
+                label1.Text = "sibyl: " + currentNum; // Displays the current num so confusion doesn't reign.
                                                             // Also, Sibyl is a cool name.
                 label2.Text = "~BOXES~";
 
@@ -179,7 +189,7 @@ namespace SIBYL_VIEWER
             }
             else
             {
-                label1.Text = "Sibyl: " + currentNum;
+                label1.Text = "sibyl: " + currentNum;
                 typeKey = "envelope";
                 label2.Text = "~ENVELOPES~";
                 enableCarrierButtons();
@@ -291,7 +301,22 @@ namespace SIBYL_VIEWER
         private void executeButton_Click(object sender, EventArgs e)
         {
             DateTime currentdate = DateTime.Now.Date; // NTP is 'da bomb. System clock won't fail, presumably.
-            Clipboard.SetText(currentdate.ToString("M-d-") + currentNum); // format: 6-11-000
+            //Clipboard.SetText(currentdate.ToString("M-d-") + currentNum);
+
+            string boarder = currentdate.ToString("M-d-") + currentNum; // format: 6-7-000
+
+            if (MHC == true)
+            {
+                //boarder preappend M.
+                boarder = boarder.Insert(0, "M");
+            }
+            if (LSND == true)
+            {
+                //boarder preappend L. 
+                boarder = boarder.Insert(0, "L");
+            }
+
+            Clipboard.SetText(boarder);
 
             hachi.Keyboard.KeyDown(VirtualKeyCode.MENU);
             System.Threading.Thread.Sleep(sleepInterval);
@@ -349,7 +374,7 @@ namespace SIBYL_VIEWER
 
             currentNumIterator();
 
-            label1.Text = "Sibyl: " + currentNum;
+            label1.Text = "sibyl: " + currentNum;
 
 
         }
@@ -402,12 +427,32 @@ namespace SIBYL_VIEWER
 
         private void masterpiece001wavToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            masterpiece001.Play();
+            try
+            {
+                masterpiece001.Play();
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("I hate whoever removed the audio file.");
+            }
         }
 
         private void masterpieceButton_Click(object sender, EventArgs e)
         {
             masterpiece001.Play();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            LSND = false;
+            MHC = true;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            LSND = true;
+            MHC = false;
         }
 
         ///
