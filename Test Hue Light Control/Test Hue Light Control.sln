@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2010
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test Hue Light Control", "Test Hue Light Control\Test Hue Light Control.csproj", "{676895AE-842A-404F-A1D3-FDFF8BE73318}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{676895AE-842A-404F-A1D3-FDFF8BE73318}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{676895AE-842A-404F-A1D3-FDFF8BE73318}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{676895AE-842A-404F-A1D3-FDFF8BE73318}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{676895AE-842A-404F-A1D3-FDFF8BE73318}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {865864C2-E8E5-4022-A003-A9A7F59FC2B2}
+	EndGlobalSection
+EndGlobal
